@@ -8,7 +8,7 @@ import { SanityImg } from "./SanityImg";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/podcast", label: "Podcast" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

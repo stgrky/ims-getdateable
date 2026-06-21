@@ -9,6 +9,7 @@ const SINGLETON_TITLES: Record<string, string> = {
   servicesPage: "Services Page",
   contactPage: "Contact Page",
   announcement: "Announcement Banner",
+  podcastPage: "Podcast Page",
 };
 
 export const structure: StructureResolver = (S) =>
@@ -27,6 +28,7 @@ export const structure: StructureResolver = (S) =>
           )
       ),
       S.divider(),
+      S.documentTypeListItem("podcastEpisode").title("Podcast Episodes"),
       S.documentTypeListItem("post").title("Blog Posts"),
       S.documentTypeListItem("author").title("Authors"),
       S.documentTypeListItem("category").title("Categories"),

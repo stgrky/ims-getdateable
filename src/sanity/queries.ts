@@ -63,6 +63,27 @@ export const aboutPageQuery = groq`*[_type == "aboutPage"][0]{
   credentials
 }`;
 
+const episodeProjection = `{
+  _id,
+  title,
+  episodeNumber,
+  spotifyUrl,
+  publishedAt,
+  guests,
+  showNotes
+}`;
+
+export const podcastPageQuery = groq`*[_type == "podcastPage"][0]{
+  eyebrow,
+  heading,
+  intro,
+  showUrl,
+  platformLinks,
+  featuredEpisode->${episodeProjection}
+}`;
+
+export const allEpisodesQuery = groq`*[_type == "podcastEpisode"] | order(coalesce(episodeNumber, 0) desc, publishedAt desc)${episodeProjection}`;
+
 export const servicesPageQuery = groq`*[_type == "servicesPage"][0]{
   heading,
   intro,

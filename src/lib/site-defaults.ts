@@ -3,6 +3,8 @@ import type {
   Announcement,
   ContactPage,
   HomePage,
+  PodcastEpisode,
+  PodcastPage,
   PostListItem,
   RecentPost,
   ServicesPage,
@@ -149,6 +151,46 @@ export const defaultContactPage: ContactPage = {
 
 export const defaultPosts: PostListItem[] = [];
 export const defaultRecentPosts: RecentPost[] = [];
+
+export const defaultEpisodes: PodcastEpisode[] = [
+  {
+    _id: "default-ep-1",
+    title: "How to stop dating your ex's personality",
+    episodeNumber: 12,
+    publishedAt: "2026-06-10T15:00:00.000Z",
+    guests: "",
+    showNotes:
+      "We get into the patterns we keep re-dating — and the small, honest questions that help you finally pick differently.",
+  },
+  {
+    _id: "default-ep-2",
+    title: "The third-date spiral (and how to get out of it)",
+    episodeNumber: 11,
+    publishedAt: "2026-06-03T15:00:00.000Z",
+    guests: "",
+    showNotes:
+      "Why everything feels fine until date three, what your nervous system is actually doing, and how to stay in the room.",
+  },
+  {
+    _id: "default-ep-3",
+    title: "U-Hauling: a love story (a cautionary tale)",
+    episodeNumber: 10,
+    publishedAt: "2026-05-27T15:00:00.000Z",
+    guests: "",
+    showNotes:
+      "Funny, informative, and occasionally spicy: the lesbian-dating classic, examined with love and zero judgment.",
+  },
+];
+
+export const defaultPodcastPage: PodcastPage = {
+  eyebrow: "The podcast",
+  heading: "Funny, informative, and occasionally spicy.",
+  intro:
+    "Real talk about dating women — the patterns, the spirals, the good kind of butterflies. Listen right here, no app-hopping required.",
+  showUrl: "",
+  featuredEpisode: defaultEpisodes[0],
+  platformLinks: [],
+};
 
 export const defaultAnnouncement: Announcement = {
   enabled: false,

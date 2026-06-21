@@ -113,6 +113,25 @@ export interface ContactPage {
   hours?: { day?: string; time?: string }[];
 }
 
+export interface PodcastEpisode {
+  _id: string;
+  title?: string;
+  episodeNumber?: number;
+  spotifyUrl?: string;
+  publishedAt?: string;
+  guests?: string;
+  showNotes?: string;
+}
+
+export interface PodcastPage {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  showUrl?: string;
+  featuredEpisode?: PodcastEpisode;
+  platformLinks?: { label?: string; url?: string }[];
+}
+
 export interface AuthorRef {
   _id: string;
   name?: string;

@@ -7,6 +7,8 @@ import { blockContent } from "./blockContent";
 import { category } from "./category";
 import { contactPage } from "./contactPage";
 import { homePage } from "./homePage";
+import { podcastEpisode } from "./podcastEpisode";
+import { podcastPage } from "./podcastPage";
 import { post } from "./post";
 import { servicesPage } from "./servicesPage";
 import { siteSettings } from "./siteSettings";
@@ -19,11 +21,13 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   post,
   testimonial,
   announcement,
+  podcastEpisode,
   siteSettings,
   homePage,
   aboutPage,
   servicesPage,
   contactPage,
+  podcastPage,
 ];
 
 export const singletonTypes = new Set([
@@ -33,4 +37,5 @@ export const singletonTypes = new Set([
   "servicesPage",
   "contactPage",
   "announcement",
+  "podcastPage",
 ]);
