@@ -87,7 +87,7 @@ export function FounderBlock({ founder, index }: Props) {
       <div className="md:sticky md:top-28">
         <Reveal>
           <h2 className="font-serif text-3xl font-bold leading-[1.1] text-[var(--color-accent)] md:text-[2.4rem]">
-            {founder.name}
+            {founder.headline ?? founder.name}
           </h2>
         </Reveal>
         {founder.title ? (

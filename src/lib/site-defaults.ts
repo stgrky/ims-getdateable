@@ -37,14 +37,12 @@ export const defaultHomePage: HomePage = {
   heroQuote:
     "The biggest problem with dating is that people are trying to find the right partner instead of focusing on being the right partner.",
   heroQuoteAuthor: "Dr. Sarah Kyle",
-  heroSubhead:
-    "A space for women who date women — and are ready to do it better. If you're successful in most areas of your life but dating feels like a disaster zone, you're not alone.",
   primaryCta: { label: "Take the free assessment", href: "/assessment" },
   secondaryCta: { label: "Listen to the podcast", href: "/podcast" },
 
   introHeading: "Welcome to dateable()af",
   introBody:
-    "A space for women who date women — and are ready to do it better. If you're successful in most areas of your life but dating feels like a disaster zone, you're not alone. Tired of…",
+    "A space for women who date women—and are ready to do it better. If you're successful in most areas of your life but dating feels like a disaster zone, you're not alone. Tired of…",
   painPoints: [
     "The endless swipe spiral?",
     "Ghosting (and the pit in your stomach that follows)?",
@@ -61,26 +59,26 @@ export const defaultHomePage: HomePage = {
     "Have more fun and less frustration",
   ],
 
-  offeringsHeading: "Here's what we've got (so far)",
+  offeringsHeading: "Here's What We've Got (So Far)",
   offerings: [
     {
       icon: "📋",
-      title: "The free Dateability Assessment",
+      title: "The FREE Dateability Assessment",
       body: "A 5-minute quiz to identify the blind spots that might be keeping you single. Get personalized results + tips you can actually use.",
-      ctaLabel: "Take the assessment",
+      ctaLabel: "Take Our Free Dateability Assessment",
       href: "/assessment",
     },
     {
       icon: "🎙️",
       title: "The dateable()af Podcast",
-      body: "Funny, informative, and occasionally spicy — what it really takes to date women successfully. Listen while you're swiping; we won't judge.",
-      ctaLabel: "Listen now",
+      body: "A funny, informative, and occasionally spicy look at what it really takes to date women successfully. (Listen while you're swiping—we won't judge.)",
+      ctaLabel: "Click Here to Listen",
       href: "/podcast",
     },
     {
       icon: "✨",
-      title: "The community (coming soon)",
-      body: "We're dreaming up the community you've been asking for — smart, inclusive, and full of women supporting women. Get on the list.",
+      title: "More to Come",
+      body: "We're dreaming up the community you've been asking for—one that's smart, inclusive, and full of women supporting women. Until then, start with the quiz and the pod. We're so glad you're here.",
       ctaLabel: "Join the list",
       href: "/community",
     },
@@ -88,22 +86,40 @@ export const defaultHomePage: HomePage = {
 
   communityHeading: "Want to be part of our future community?",
   communityBody:
-    "We know women are craving better ways to meet other high-quality women — we are too. That's why we're building a community just for you. But we don't want to guess what you need — we want to hear it from you. Tell us what would feel valuable, supportive, and real, and you'll be first in line when we open the doors.",
+    "We know women are craving better ways to meet other high-quality women—we are too. That's why we're building a community just for you. But we don't want to guess what you need—we want to hear it straight from you. Tell us what kind of scene would feel valuable, supportive, and real. Share your thoughts, and you'll be first in line when we open the doors.",
   communityCta: {
-    label: "Send us your ideas — we're listening",
+    label: "Click here to send us your ideas—we're listening.",
     href: "/contact",
   },
 
   newsletterHeading: "Stay in the loop",
   newsletterBody:
-    "You want to stay informed without getting spammed. We want to stay connected with you. We'll send occasional dating tips and updates about what's going on in the dateable()af community. Join our email list to stay connected.",
+    "You want to stay informed without getting spammed. We want to stay connected with you. We would love to send you occasional dating tips and updates about what's going on in the dateable()af community. Join our email list to stay connected.",
+  audienceCards: [
+    {
+      title: "About the Assessment",
+      body: "You're someone who wants to know yourself better. Our dateability assessment will show you how well you're doing with physical self-care, emotional stability, communication, community, passion, confidence, financial fitness, and being a good human.",
+    },
+    {
+      title: "You Want to Meet Other Women Like You",
+      body: "You're standing by, waiting for us to open the dateable()af membership program so you can make some connections. Join our email list so you can get one of the first invitations!",
+    },
+    {
+      title: "You Want to Laugh, Learn, and Be Entertained",
+      body: "Listen and subscribe to our dateable()af Podcast. We're chatting about all things related to women dating women, plus interviewing some amazing guests.",
+    },
+    {
+      title: "Let Us Know What Kind of Support You Need",
+      body: "dateable()af was designed for women, by women. We want to create a community just for you. Please message us and let us know how we can help you make dating less brutal.",
+    },
+  ],
 };
 
 export const defaultTestimonials: Testimonial[] = [
   {
     _id: "default-1",
     quote:
-      "Previews of the dateable()af Podcast are so smart and funny! I've already learned a lot and I can't wait for the next episodes to come out. Our community has been needing something like this for a long time — Rachel and Sarah are perfect for this role.",
+      "Previews of the dateable()af Podcast are so smart and funny! I've already learned a lot and I can't wait for the next episodes to come out. Our community has been needing something like the dateable()af Podcast for a long time! Rachel and Sarah are perfect for this role.",
     attribution: "J.C.",
     context: "Single lesbian, age 46",
     displayOrder: 1,
@@ -111,7 +127,7 @@ export const defaultTestimonials: Testimonial[] = [
   {
     _id: "default-2",
     quote:
-      "I love the whole concept of dateable()af, but I'm especially impressed with the dateability assessment Dr. Kyle created. It's a comprehensive tool that efficiently zeroes in on the areas that may be holding someone back from the relationship they desire.",
+      "I love the whole concept of “dateable()af,” but I am especially impressed with the “dateability” assessment Dr. Kyle created. It's a comprehensive tool to evaluate an individual's overall health and well-being, efficiently zeroing in on areas that may be holding someone back from the successful relationship they desire. Her model is going to save people a tremendous amount of time, money and general anguish when it comes to dating.",
     attribution: "J. Bosarge",
     context: "Ph.D. Clinical Psychologist",
     displayOrder: 2,
@@ -119,7 +135,7 @@ export const defaultTestimonials: Testimonial[] = [
   {
     _id: "default-3",
     quote:
-      "I've been very successful in every area of my life except romantic relationships. It's so hard to find quality women, and the apps just aren't getting it right. I love what dateable()af is envisioning — I can't wait to see where it goes!",
+      "I've been very successful in every area of my life except romantic relationships. It's so hard to find quality women, and the apps just aren't getting it right. I love what dateable()af is envisioning for our community and I can't wait to see where it goes! The Dateability Assessment is such a great tool and I really want to meet other women who are putting this knowledge into practice.",
     attribution: "A.G.",
     context: "Single queer woman, age 42",
     displayOrder: 3,
@@ -134,16 +150,19 @@ export const defaultAboutPage: AboutPage = {
   founders: [
     {
       name: "Dr. Sarah Kyle",
-      title: "Therapist & founder of dateable()af",
-      bio: "I've spent over 25 years as a therapist helping people build better relationships — but let's be real: dating can be brutal. I've worked with so many smart, successful women who have everything together except their love life. The apps? A necessary evil. The ghosting? Infuriating. The whole process? Straight-up exhausting. I get it, because I've seen it all — both as a therapist and as someone who's had to navigate queer dating myself.\n\nI came out at 29, which in lesbian years felt practically ancient. I did the casual dating thing, had a couple of long-ish relationships, and I've been with my current partner for over a decade and a half. So yes — I've experienced the highs, the lows, and the \"why did she just text me 'hey' six months later?\" confusion. Through it all, one thing has become clear: there's a better way to do this.\n\nThat's why I started dateable()af — to help women break out of frustrating patterns and actually enjoy dating again. The key? Small, powerful shifts that change the game, without the stress, the overthinking, or the emotional rollercoaster.",
-      ctaLabel: "Take our free assessment",
+      headline: "I'm Dr. Sarah Kyle, therapist and founder of dateable()af.",
+      title: "Therapist & founder",
+      bio: "I've spent over 25 years as a therapist helping people build better relationships, but let's be real—dating can be brutal. I've worked with so many smart, successful women who have everything together except their love life. The apps? A necessary evil. The ghosting? Infuriating. The whole process? Straight-up exhausting. I get it—because I've seen it all—both as a therapist and as someone who's had to navigate queer dating myself.\n\nI came out at 29, which in lesbian years felt practically ancient. I did the casual dating thing, had a couple of long(ish)-term relationships, and I've been with my current partner for over a decade and a half. So yes, I've experienced the highs, the lows, and the \"why did she just text me 'hey' six months later?\" confusion. And through it all, one thing has become clear: there's a better way to do this.\n\nThat's why I started dateable()af—to help women break out of frustrating patterns and actually enjoy dating again. The key? Small, powerful shifts that change the game—without the stress, the overthinking, or the emotional rollercoaster. Whether you're sick of the apps, trapped in the same dating cycles, or just trying to figure out what actually makes someone dateable, I've got you.",
+      ctaLabel: "Take Our Free Assessment",
       ctaHref: "/assessment",
     },
     {
       name: "Rachel Howell, M.Ed.",
-      title: "Business partner & researcher extraordinaire",
-      bio: "I bring over 30 years of research and training experience to dateable()af, but what really fuels me is my deep curiosity about human relationships — especially the wonderfully complex world of women-loving-women.\n\nProudly a lesbian since 10th grade, I've lived just about every phase of queer dating: the U-Haul era, the married years, and now, the dating-again adventure. Let's just say, I've got stories.\n\nThrough all the twists and turns, one thing has stayed the same: my passion for understanding what makes relationships work (and what makes them hilariously complicated). Alongside Sarah, I bring a mix of real-life experience, research-backed insights, and a love of laughing through the chaos of dating women.",
-      ctaLabel: "Take our free assessment",
+      headline:
+        "And I'm Rachel Howell, M.Ed., dateable()af business partner and researcher extraordinaire.",
+      title: "Business partner & researcher",
+      bio: "I bring over 30 years of research and training experience to dateable()af, but what really fuels me is my deep curiosity about human relationships—especially the wonderfully complex world of women-loving-women.\n\nProudly a lesbian since 10th grade, I've lived just about every phase of queer dating: the U-Haul era, the married years, and now, the dating-again adventure. Let's just say, I've got stories.\n\nThrough all the twists and turns, one thing has stayed the same: my passion for understanding what makes relationships work (and what makes them hilariously complicated). Alongside Sarah, I bring a mix of real-life experiences, research-backed insights, and a love of laughing through the chaos of dating women.\n\nWhether it's sharing my own lessons learned or breaking down modern dating dynamics, I show up with authenticity, humor, and a genuine desire to help women navigate love and connection with more confidence—and a lot less stress.",
+      ctaLabel: "Take Our Free Assessment",
       ctaHref: "/assessment",
     },
   ],

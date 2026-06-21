@@ -72,6 +72,7 @@ export interface HomePage {
   communityCta?: Cta;
   newsletterHeading?: string;
   newsletterBody?: string;
+  audienceCards?: { title?: string; body?: string }[];
 }
 
 export interface Testimonial {
@@ -98,6 +99,7 @@ export interface Announcement {
 
 export interface Founder {
   name?: string;
+  headline?: string;
   title?: string;
   portrait?: SanityImageWithAlt;
   bio?: string;

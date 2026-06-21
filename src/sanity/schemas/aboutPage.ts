@@ -31,6 +31,13 @@ export const aboutPage = defineType({
           fields: [
             { name: "name", type: "string", title: "Name" },
             {
+              name: "headline",
+              type: "string",
+              title: "Headline",
+              description:
+                "The big first-person heading, e.g. \"I'm Dr. Sarah Kyle, therapist and founder of dateable()af.\" Falls back to the name.",
+            },
+            {
               name: "title",
               type: "string",
               title: "Title / role",

@@ -37,7 +37,8 @@ export const homePageQuery = groq`*[_type == "homePage"][0]{
   communityBody,
   communityCta,
   newsletterHeading,
-  newsletterBody
+  newsletterBody,
+  audienceCards
 }`;
 
 export const featuredTestimonialsQuery = groq`*[_type == "testimonial"] | order(coalesce(displayOrder, 9999) asc, _createdAt desc)[0...5]{
@@ -66,6 +67,7 @@ export const aboutPageQuery = groq`*[_type == "aboutPage"][0]{
   intro,
   founders[]{
     name,
+    headline,
     title,
     portrait,
     bio,

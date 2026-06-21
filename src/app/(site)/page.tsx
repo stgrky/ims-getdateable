@@ -258,6 +258,28 @@ export default async function HomePageRoute() {
                 <NewsletterForm />
               </Reveal>
             </div>
+
+            {home.audienceCards && home.audienceCards.length > 0 ? (
+              <div className="mt-14 grid gap-5 sm:grid-cols-2">
+                {home.audienceCards.map((card, i) => (
+                  <Reveal key={`${card.title}-${i}`} delay={0.1 + i * 0.06}>
+                    <div
+                      className="h-full rounded-2xl p-7"
+                      style={{ background: "var(--color-foreground)" }}
+                    >
+                      <h3 className="font-serif text-lg font-bold text-white">
+                        {card.title}
+                      </h3>
+                      {card.body ? (
+                        <p className="mt-3 text-[15px] leading-relaxed text-white/70">
+                          {card.body}
+                        </p>
+                      ) : null}
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            ) : null}
           </Container>
         </section>
       ) : null}

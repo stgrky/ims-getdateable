@@ -156,6 +156,22 @@ export const homePage = defineType({
       type: "text",
       rows: 3,
     }),
+    defineField({
+      name: "audienceCards",
+      title: "Who this is for (cards)",
+      description: "The 'you're someone who…' cards beside the email signup.",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "title", type: "string", title: "Title" },
+            { name: "body", type: "text", rows: 3, title: "Body" },
+          ],
+          preview: { select: { title: "title", subtitle: "body" } },
+        },
+      ],
+    }),
   ],
   preview: { prepare: () => ({ title: "Home Page" }) },
 });
