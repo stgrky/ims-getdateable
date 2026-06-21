@@ -16,8 +16,8 @@ export const defaultSiteSettings: SiteSettings = {
   practiceName: "Therapy Practice",
   tagline:
     "Therapy for adults navigating anxiety, depression, grief, transitions, and relationships.",
-  palette: "sage",
-  fontPairing: "cormorant",
+  palette: "dateable",
+  fontPairing: "plus-jakarta",
   email: "hello@example.com",
   phone: "(555) 123-4567",
   addressLine: "123 Main Street, Austin, TX",

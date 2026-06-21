@@ -11,7 +11,8 @@ export type PaletteName =
   | "navy"
   | "terracotta"
   | "lavender"
-  | "teal";
+  | "teal"
+  | "dateable";
 
 export type FontPairingName =
   | "cormorant"

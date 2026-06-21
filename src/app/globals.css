@@ -88,6 +88,18 @@
   --p-accent-strong: #236b62;
   --p-accent-soft: #e3f0ee;
 }
+/* Dateable — bold + joyful: coral-orange accent, navy ink, warm cream.
+   Get Dateable's signature; the first "bold" entry in the library. */
+[data-palette="dateable"] {
+  --p-background: #fbf8f4;
+  --p-surface: #ffffff;
+  --p-foreground: #172a4d;
+  --p-muted: #5b6b85;
+  --p-subtle: #e5ded4;
+  --p-accent: #e85522;
+  --p-accent-strong: #c2431a;
+  --p-accent-soft: #fbe3d6;
+}
 
 /* ── Font Library ── (cormorant is the :root default above) ── */
 [data-fonts="libre-franklin"] {

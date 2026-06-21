@@ -30,10 +30,14 @@ export const siteSettings = defineType({
           { title: "Terracotta — warm, bold", value: "terracotta" },
           { title: "Lavender — soft, serene", value: "lavender" },
           { title: "Teal — balanced, neutral", value: "teal" },
+          {
+            title: "Dateable — bold, joyful (orange + navy)",
+            value: "dateable",
+          },
         ],
         layout: "radio",
       },
-      initialValue: "sage",
+      initialValue: "dateable",
     }),
     defineField({
       name: "fontPairing",
@@ -56,7 +60,7 @@ export const siteSettings = defineType({
         ],
         layout: "radio",
       },
-      initialValue: "cormorant",
+      initialValue: "plus-jakarta",
     }),
     defineField({
       name: "logo",
