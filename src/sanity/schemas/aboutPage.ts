@@ -2,9 +2,10 @@ import { defineField, defineType } from "sanity";
 
 export const aboutPage = defineType({
   name: "aboutPage",
-  title: "About Page",
+  title: "Origin Story",
   type: "document",
   fields: [
+    defineField({ name: "eyebrow", title: "Eyebrow", type: "string" }),
     defineField({
       name: "heading",
       title: "Heading",
@@ -16,27 +17,46 @@ export const aboutPage = defineType({
       title: "Intro",
       type: "text",
       rows: 3,
-      description: "Short summary shown above the main body.",
+      description: "Short summary shown under the heading. Optional.",
     }),
     defineField({
-      name: "portrait",
-      title: "Portrait",
-      type: "image",
-      options: { hotspot: true },
-      fields: [{ name: "alt", type: "string", title: "Alt text" }],
-    }),
-    defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    }),
-    defineField({
-      name: "credentials",
-      title: "Credentials",
+      name: "founders",
+      title: "Founders",
+      description:
+        "Each founder gets their own editorial block (portrait + bio).",
       type: "array",
-      of: [{ type: "string" }],
-      description: "Degrees, licenses, certifications.",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "name", type: "string", title: "Name" },
+            {
+              name: "title",
+              type: "string",
+              title: "Title / role",
+              description: "e.g. 'Therapist & founder'",
+            },
+            {
+              name: "portrait",
+              type: "image",
+              title: "Portrait",
+              options: { hotspot: true },
+              fields: [{ name: "alt", type: "string", title: "Alt text" }],
+            },
+            {
+              name: "bio",
+              type: "text",
+              rows: 8,
+              title: "Bio",
+              description: "Separate paragraphs with a blank line.",
+            },
+            { name: "ctaLabel", type: "string", title: "CTA label" },
+            { name: "ctaHref", type: "string", title: "CTA link" },
+          ],
+          preview: { select: { title: "name", subtitle: "title" } },
+        },
+      ],
     }),
   ],
-  preview: { prepare: () => ({ title: "About Page" }) },
+  preview: { prepare: () => ({ title: "Origin Story" }) },
 });

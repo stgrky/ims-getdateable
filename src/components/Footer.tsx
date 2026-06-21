@@ -46,16 +46,27 @@ export function Footer({ settings }: { settings: SiteSettings }) {
         <div className="space-y-2 text-sm text-[var(--color-muted)]">
           <p className="font-medium text-[var(--color-foreground)]">Site</p>
           <p>
-            <Link href="/about" className="hover:text-[var(--color-foreground)]">
-              About
+            <Link
+              href="/origin-story"
+              className="hover:text-[var(--color-foreground)]"
+            >
+              Origin Story
             </Link>
           </p>
           <p>
             <Link
-              href="/services"
+              href="/podcast"
               className="hover:text-[var(--color-foreground)]"
             >
-              Services
+              Podcast
+            </Link>
+          </p>
+          <p>
+            <Link
+              href="/assessment"
+              className="hover:text-[var(--color-foreground)]"
+            >
+              Assessment
             </Link>
           </p>
           <p>

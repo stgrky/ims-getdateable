@@ -6,9 +6,9 @@ import { Container } from "./Container";
 import { SanityImg } from "./SanityImg";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/origin-story", label: "Origin Story" },
   { href: "/podcast", label: "Podcast" },
+  { href: "/assessment", label: "Assessment" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

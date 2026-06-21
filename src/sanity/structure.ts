@@ -5,7 +5,7 @@ import { singletonTypes } from "./schemas";
 const SINGLETON_TITLES: Record<string, string> = {
   siteSettings: "Site Settings",
   homePage: "Home Page",
-  aboutPage: "About Page",
+  aboutPage: "Origin Story",
   servicesPage: "Services Page",
   contactPage: "Contact Page",
   announcement: "Announcement Banner",

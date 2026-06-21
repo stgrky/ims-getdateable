@@ -96,12 +96,20 @@ export interface Announcement {
   endDate?: string;
 }
 
+export interface Founder {
+  name?: string;
+  title?: string;
+  portrait?: SanityImageWithAlt;
+  bio?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
 export interface AboutPage {
+  eyebrow?: string;
   heading?: string;
   intro?: string;
-  body?: PortableTextBlock[];
-  portrait?: SanityImageWithAlt;
-  credentials?: string[];
+  founders?: Founder[];
 }
 
 export interface ServiceItem {

@@ -61,11 +61,17 @@ export const announcementQuery = groq`*[_type == "announcement"][0]{
 }`;
 
 export const aboutPageQuery = groq`*[_type == "aboutPage"][0]{
+  eyebrow,
   heading,
   intro,
-  body,
-  portrait,
-  credentials
+  founders[]{
+    name,
+    title,
+    portrait,
+    bio,
+    ctaLabel,
+    ctaHref
+  }
 }`;
 
 const episodeProjection = `{

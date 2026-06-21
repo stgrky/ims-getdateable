@@ -50,8 +50,36 @@ const communityPage = {
   ctaHref: "/contact",
 };
 
+const aboutPage = {
+  _id: "aboutPage",
+  _type: "aboutPage",
+  eyebrow: "Our origin story",
+  heading:
+    "Two women who love women — and got tired of watching dating be a nightmare.",
+  intro:
+    "dateable()af is the work of two longtime daters who decided there had to be a better way. Here's who we are and why we started.",
+  founders: [
+    {
+      _key: "sarah",
+      name: "Dr. Sarah Kyle",
+      title: "Therapist & founder of dateable()af",
+      bio: "I've spent over 25 years as a therapist helping people build better relationships — but let's be real: dating can be brutal. I've worked with so many smart, successful women who have everything together except their love life. The apps? A necessary evil. The ghosting? Infuriating. The whole process? Straight-up exhausting. I get it, because I've seen it all — both as a therapist and as someone who's had to navigate queer dating myself.\n\nI came out at 29, which in lesbian years felt practically ancient. I did the casual dating thing, had a couple of long-ish relationships, and I've been with my current partner for over a decade and a half. So yes — I've experienced the highs, the lows, and the \"why did she just text me 'hey' six months later?\" confusion. Through it all, one thing has become clear: there's a better way to do this.\n\nThat's why I started dateable()af — to help women break out of frustrating patterns and actually enjoy dating again. The key? Small, powerful shifts that change the game, without the stress, the overthinking, or the emotional rollercoaster.",
+      ctaLabel: "Take our free assessment",
+      ctaHref: "/assessment",
+    },
+    {
+      _key: "rachel",
+      name: "Rachel Howell, M.Ed.",
+      title: "Business partner & researcher extraordinaire",
+      bio: "I bring over 30 years of research and training experience to dateable()af, but what really fuels me is my deep curiosity about human relationships — especially the wonderfully complex world of women-loving-women.\n\nProudly a lesbian since 10th grade, I've lived just about every phase of queer dating: the U-Haul era, the married years, and now, the dating-again adventure. Let's just say, I've got stories.\n\nThrough all the twists and turns, one thing has stayed the same: my passion for understanding what makes relationships work (and what makes them hilariously complicated). Alongside Sarah, I bring a mix of real-life experience, research-backed insights, and a love of laughing through the chaos of dating women.",
+      ctaLabel: "Take our free assessment",
+      ctaHref: "/assessment",
+    },
+  ],
+};
+
 console.log("→ Upserting documents...");
-for (const doc of [assessmentPage, communityPage]) {
+for (const doc of [assessmentPage, communityPage, aboutPage]) {
   const res = await client.createOrReplace(doc);
   console.log(`   ${res._type.padEnd(16)} ${res._id}`);
 }
