@@ -89,6 +89,25 @@ export const podcastPageQuery = groq`*[_type == "podcastPage"][0]{
 
 export const allEpisodesQuery = groq`*[_type == "podcastEpisode"] | order(coalesce(episodeNumber, 0) desc, publishedAt desc)${episodeProjection}`;
 
+export const assessmentPageQuery = groq`*[_type == "assessmentPage"][0]{
+  eyebrow,
+  heading,
+  intro,
+  benefitsHeading,
+  benefits,
+  typeformUrl
+}`;
+
+export const communityPageQuery = groq`*[_type == "communityPage"][0]{
+  eyebrow,
+  heading,
+  body,
+  pointsHeading,
+  points,
+  ctaLabel,
+  ctaHref
+}`;
+
 export const servicesPageQuery = groq`*[_type == "servicesPage"][0]{
   heading,
   intro,

@@ -2,9 +2,11 @@ import type { SchemaTypeDefinition } from "sanity";
 
 import { aboutPage } from "./aboutPage";
 import { announcement } from "./announcement";
+import { assessmentPage } from "./assessmentPage";
 import { author } from "./author";
 import { blockContent } from "./blockContent";
 import { category } from "./category";
+import { communityPage } from "./communityPage";
 import { contactPage } from "./contactPage";
 import { homePage } from "./homePage";
 import { podcastEpisode } from "./podcastEpisode";
@@ -28,6 +30,8 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   servicesPage,
   contactPage,
   podcastPage,
+  assessmentPage,
+  communityPage,
 ];
 
 export const singletonTypes = new Set([
@@ -38,4 +42,6 @@ export const singletonTypes = new Set([
   "contactPage",
   "announcement",
   "podcastPage",
+  "assessmentPage",
+  "communityPage",
 ]);

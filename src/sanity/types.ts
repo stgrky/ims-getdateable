@@ -145,6 +145,25 @@ export interface PodcastPage {
   platformLinks?: { label?: string; url?: string }[];
 }
 
+export interface AssessmentPage {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  benefitsHeading?: string;
+  benefits?: string[];
+  typeformUrl?: string;
+}
+
+export interface CommunityPage {
+  eyebrow?: string;
+  heading?: string;
+  body?: string;
+  pointsHeading?: string;
+  points?: string[];
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
 export interface AuthorRef {
   _id: string;
   name?: string;
