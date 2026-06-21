@@ -1,5 +1,16 @@
 import { defineField, defineType } from "sanity";
 
+const ctaObject = (name: string, title: string) =>
+  defineField({
+    name,
+    title,
+    type: "object",
+    fields: [
+      { name: "label", type: "string", title: "Label" },
+      { name: "href", type: "string", title: "Link" },
+    ],
+  });
+
 export const homePage = defineType({
   name: "homePage",
   title: "Home Page",
@@ -9,15 +20,26 @@ export const homePage = defineType({
     defineField({
       name: "heroEyebrow",
       title: "Hero eyebrow",
-      description:
-        "Small label above the headline (e.g. 'Therapy in Austin' or 'Now accepting new clients'). Optional.",
+      description: "Small label above the headline. Optional.",
       type: "string",
     }),
     defineField({
       name: "heroHeading",
-      title: "Hero heading",
+      title: "Hero heading (the big tagline)",
       type: "string",
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "heroQuote",
+      title: "Hero quote",
+      description: "Optional pull-quote under the tagline.",
+      type: "text",
+      rows: 2,
+    }),
+    defineField({
+      name: "heroQuoteAuthor",
+      title: "Hero quote — author",
+      type: "string",
     }),
     defineField({
       name: "heroSubhead",
@@ -27,47 +49,70 @@ export const homePage = defineType({
     }),
     defineField({
       name: "heroImage",
-      title: "Hero image",
+      title: "Hero image (optional)",
+      description:
+        "Leave blank for a bold type-only hero. Add a photo for a two-column hero.",
       type: "image",
       options: { hotspot: true },
       fields: [{ name: "alt", type: "string", title: "Alt text" }],
     }),
-    defineField({
-      name: "primaryCta",
-      title: "Primary CTA",
-      type: "object",
-      fields: [
-        { name: "label", type: "string", title: "Label" },
-        { name: "href", type: "string", title: "Link" },
-      ],
-    }),
-    defineField({
-      name: "secondaryCta",
-      title: "Secondary CTA",
-      type: "object",
-      fields: [
-        { name: "label", type: "string", title: "Label" },
-        { name: "href", type: "string", title: "Link" },
-      ],
-    }),
+    ctaObject("primaryCta", "Primary CTA"),
+    ctaObject("secondaryCta", "Secondary CTA"),
 
-    // ── What to expect ───────────────────────────────────
+    // ── Intro / pain points ──────────────────────────────
     defineField({
-      name: "whatToExpectHeading",
-      title: "What to expect — heading",
+      name: "introHeading",
+      title: "Intro heading",
       type: "string",
     }),
     defineField({
-      name: "whatToExpectIntro",
-      title: "What to expect — intro",
+      name: "introBody",
+      title: "Intro body",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "painPoints",
+      title: "Pain points (the 'tired of…' list)",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
+    defineField({
+      name: "introClosing",
+      title: "Intro closing line",
+      description: "e.g. \"Yeah, we've been there. Let's fix it.\"",
+      type: "string",
+    }),
+
+    // ── Mission ('we're not a dating app') ───────────────
+    defineField({
+      name: "missionHeading",
+      title: "Mission heading",
+      type: "string",
+    }),
+    defineField({
+      name: "missionIntro",
+      title: "Mission intro",
       type: "text",
       rows: 2,
     }),
     defineField({
-      name: "whatToExpectSteps",
-      title: "What to expect — steps",
-      description:
-        "Three short cards walking a prospective client through what happens. Keep each body to a sentence or two.",
+      name: "missionPoints",
+      title: "Mission points",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
+
+    // ── Offerings ('here's what we've got') ──────────────
+    defineField({
+      name: "offeringsHeading",
+      title: "Offerings heading",
+      type: "string",
+    }),
+    defineField({
+      name: "offerings",
+      title: "Offerings",
+      description: "The cards for the assessment, podcast, community, etc.",
       type: "array",
       of: [
         {
@@ -75,73 +120,41 @@ export const homePage = defineType({
           fields: [
             { name: "title", type: "string", title: "Title" },
             { name: "body", type: "text", rows: 3, title: "Body" },
-            {
-              name: "icon",
-              type: "string",
-              title: "Icon (emoji)",
-              description: "A single emoji or short symbol.",
-            },
+            { name: "icon", type: "string", title: "Icon (emoji)" },
+            { name: "ctaLabel", type: "string", title: "Link label" },
+            { name: "href", type: "string", title: "Link" },
           ],
-          preview: {
-            select: { title: "title", subtitle: "body" },
-          },
+          preview: { select: { title: "title", subtitle: "body" } },
         },
       ],
       validation: (rule) => rule.max(4),
     }),
 
-    // ── About teaser ─────────────────────────────────────
+    // ── Community teaser (waitlist) ──────────────────────
     defineField({
-      name: "aboutTeaserHeading",
-      title: "About teaser heading",
+      name: "communityHeading",
+      title: "Community heading",
       type: "string",
     }),
     defineField({
-      name: "aboutTeaserBody",
-      title: "About teaser body",
-      type: "text",
-      rows: 4,
-    }),
-    defineField({
-      name: "aboutTeaserImage",
-      title: "About teaser image",
-      type: "image",
-      options: { hotspot: true },
-      fields: [{ name: "alt", type: "string", title: "Alt text" }],
-    }),
-
-    // ── Pricing & insurance ──────────────────────────────
-    defineField({
-      name: "pricingHeading",
-      title: "Pricing & insurance — heading",
-      type: "string",
-    }),
-    defineField({
-      name: "pricingIntro",
-      title: "Pricing & insurance — intro",
-      type: "text",
-      rows: 2,
-    }),
-    defineField({
-      name: "sessionFee",
-      title: "Session fee",
-      description: "e.g. '$175 per 50-min session'",
-      type: "string",
-    }),
-    defineField({
-      name: "insuranceNote",
-      title: "Insurance note",
-      description:
-        "A sentence or two on insurance accepted, out-of-network reimbursement, etc.",
+      name: "communityBody",
+      title: "Community body",
       type: "text",
       rows: 3,
     }),
+    ctaObject("communityCta", "Community CTA"),
+
+    // ── Newsletter ───────────────────────────────────────
     defineField({
-      name: "slidingScaleNote",
-      title: "Sliding scale note",
-      description: "A short statement about sliding scale availability.",
+      name: "newsletterHeading",
+      title: "Newsletter heading",
+      type: "string",
+    }),
+    defineField({
+      name: "newsletterBody",
+      title: "Newsletter body",
       type: "text",
-      rows: 2,
+      rows: 3,
     }),
   ],
   preview: { prepare: () => ({ title: "Home Page" }) },

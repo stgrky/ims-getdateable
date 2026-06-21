@@ -36,30 +36,42 @@ export interface SiteSettings {
   stickyCta?: { label?: string; href?: string };
 }
 
-export interface WhatToExpectStep {
+export interface Cta {
+  label?: string;
+  href?: string;
+}
+
+export interface Offering {
   title?: string;
   body?: string;
   icon?: string;
+  ctaLabel?: string;
+  href?: string;
 }
 
 export interface HomePage {
   heroEyebrow?: string;
   heroHeading?: string;
+  heroQuote?: string;
+  heroQuoteAuthor?: string;
   heroSubhead?: string;
   heroImage?: SanityImageWithAlt;
-  primaryCta?: { label?: string; href?: string };
-  secondaryCta?: { label?: string; href?: string };
-  whatToExpectHeading?: string;
-  whatToExpectIntro?: string;
-  whatToExpectSteps?: WhatToExpectStep[];
-  aboutTeaserHeading?: string;
-  aboutTeaserBody?: string;
-  aboutTeaserImage?: SanityImageWithAlt;
-  pricingHeading?: string;
-  pricingIntro?: string;
-  sessionFee?: string;
-  insuranceNote?: string;
-  slidingScaleNote?: string;
+  primaryCta?: Cta;
+  secondaryCta?: Cta;
+  introHeading?: string;
+  introBody?: string;
+  painPoints?: string[];
+  introClosing?: string;
+  missionHeading?: string;
+  missionIntro?: string;
+  missionPoints?: string[];
+  offeringsHeading?: string;
+  offerings?: Offering[];
+  communityHeading?: string;
+  communityBody?: string;
+  communityCta?: Cta;
+  newsletterHeading?: string;
+  newsletterBody?: string;
 }
 
 export interface Testimonial {

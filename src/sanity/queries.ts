@@ -18,21 +18,26 @@ export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
 export const homePageQuery = groq`*[_type == "homePage"][0]{
   heroEyebrow,
   heroHeading,
+  heroQuote,
+  heroQuoteAuthor,
   heroSubhead,
   heroImage,
   primaryCta,
   secondaryCta,
-  whatToExpectHeading,
-  whatToExpectIntro,
-  whatToExpectSteps,
-  aboutTeaserHeading,
-  aboutTeaserBody,
-  aboutTeaserImage,
-  pricingHeading,
-  pricingIntro,
-  sessionFee,
-  insuranceNote,
-  slidingScaleNote
+  introHeading,
+  introBody,
+  painPoints,
+  introClosing,
+  missionHeading,
+  missionIntro,
+  missionPoints,
+  offeringsHeading,
+  offerings,
+  communityHeading,
+  communityBody,
+  communityCta,
+  newsletterHeading,
+  newsletterBody
 }`;
 
 export const featuredTestimonialsQuery = groq`*[_type == "testimonial"] | order(coalesce(displayOrder, 9999) asc, _createdAt desc)[0...5]{
