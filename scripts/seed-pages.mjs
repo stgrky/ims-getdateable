@@ -78,8 +78,20 @@ const aboutPage = {
   ],
 };
 
+const contactPage = {
+  _id: "contactPage",
+  _type: "contactPage",
+  heading: "Let's connect",
+  intro:
+    "Your questions and ideas matter to us. Whether you want to say hi, ask about the assessment, or tell us what you'd want from the community — reach out. A real human (one of us) reads every note.",
+  email: "info@getdateable.com",
+  phone: "(512) 507-3982",
+  addressLine: "2111 Dickson Drive, Suite 33, Austin, TX 78704",
+  hours: [],
+};
+
 console.log("→ Upserting documents...");
-for (const doc of [assessmentPage, communityPage, aboutPage]) {
+for (const doc of [assessmentPage, communityPage, aboutPage, contactPage]) {
   const res = await client.createOrReplace(doc);
   console.log(`   ${res._type.padEnd(16)} ${res._id}`);
 }

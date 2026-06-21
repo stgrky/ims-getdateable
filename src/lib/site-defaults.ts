@@ -176,16 +176,13 @@ export const defaultServicesPage: ServicesPage = {
 };
 
 export const defaultContactPage: ContactPage = {
-  heading: "Get in touch",
+  heading: "Let's connect",
   intro:
-    "Reach out by email or phone, and I'll get back to you within two business days. If we're a good fit, we'll set up a brief consultation call before scheduling a first session.",
-  email: "hello@example.com",
-  phone: "(555) 123-4567",
-  addressLine: "123 Main Street, Austin, TX",
-  hours: [
-    { day: "Mon – Thu", time: "9:00 am – 6:00 pm" },
-    { day: "Fri", time: "9:00 am – 1:00 pm" },
-  ],
+    "Your questions and ideas matter to us. Whether you want to say hi, ask about the assessment, or tell us what you'd want from the community — reach out. A real human (one of us) reads every note.",
+  email: "info@getdateable.com",
+  phone: "(512) 507-3982",
+  addressLine: "2111 Dickson Drive, Suite 33, Austin, TX 78704",
+  hours: [],
 };
 
 export const defaultPosts: PostListItem[] = [];
