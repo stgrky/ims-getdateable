@@ -40,6 +40,7 @@ yarn-error.log*
 /dist
 # Per-deploy build directory left behind by the Sanity CLI
 /sample-therapist
+/ims-getdateable
 
 # vercel
 .vercel
