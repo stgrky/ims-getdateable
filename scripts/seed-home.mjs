@@ -19,7 +19,7 @@ const siteSettings = {
   _id: "siteSettings",
   _type: "siteSettings",
   practiceName: "dateable()af",
-  tagline: "Women are amazing. Dating them shouldn't be a nightmare.",
+  tagline: "A podcast about relationships—decoded one hot mess at a time.",
   palette: "dateable",
   fontPairing: "plus-jakarta",
   email: "info@getdateable.com",
@@ -30,96 +30,58 @@ const siteSettings = {
     { ...k("fb"), label: "Facebook", url: "#" },
     { ...k("tt"), label: "TikTok", url: "#" },
   ],
-  footerText: "By women, for women. Made with a little spice in Austin, TX.",
+  footerText: "Relationships, decoded. Made with humor and heart in Austin, TX.",
   stickyCta: { label: "Take the assessment", href: "/assessment" },
 };
 
 const homePage = {
   _id: "homePage",
   _type: "homePage",
-  heroEyebrow: "For women who date women",
-  heroHeading: "Women are amazing. Dating them shouldn't be a nightmare.",
-  heroQuote:
-    "The biggest problem with dating is that people are trying to find the right partner instead of focusing on being the right partner.",
-  heroQuoteAuthor: "Dr. Sarah Kyle",
+  heroEyebrow: "The Dateable AF Podcast",
+  heroHeading: "Welcome to our podcast. We talk relationships. All of them.",
+  heroQuote: "Decoded—one hot mess at a time.",
+  heroSubhead:
+    "Relationships are complicated—not just romantic ones, but the ones with partners, exes, friends, family, coworkers, and yourself. Dateable AF is a podcast about how humans connect, avoid, attach, fight, love, and try again—with humor, honesty, and zero bullshit.",
   primaryCta: { label: "Take the free assessment", href: "/assessment" },
   secondaryCta: { label: "Listen to the podcast", href: "/podcast" },
-  introHeading: "Welcome to dateable()af",
+  introHeading: "We don't give dating tips.",
   introBody:
-    "A space for women who date women—and are ready to do it better. If you're successful in most areas of your life but dating feels like a disaster zone, you're not alone. Tired of…",
+    "We help you understand your relationship patterns. Every week on the Dateable AF Podcast, we break down:",
   painPoints: [
-    "The endless swipe spiral?",
-    "Ghosting (and the pit in your stomach that follows)?",
-    "Wondering if there are any quality women left?",
+    "Why intimacy feels risky",
+    "Why you get defensive",
+    "Why you people-please",
+    "Why you shut down",
+    "Why you stay too long",
+    "And why you keep ending up in the same emotional place with different people",
   ],
-  introClosing: "Yeah, we've been there. Let's fix it.",
-  missionHeading: "We're not a dating app.",
+  introClosing:
+    "Whether you're dating, married, divorced, single, or “it's complicated,” these patterns follow you everywhere—until you understand them.",
+  missionHeading: "The Relatability Assessment.",
   missionIntro:
-    "We're two women (and longtime daters) who love women, and we're on a mission to help you:",
+    "It's not about being “good” or “bad.” It shows you how you're doing across eight core relationship capacities—and what's quietly getting in the way:",
   missionPoints: [
-    "Become your most dateable self",
-    "Navigate the wild world of lesbian dating",
-    "Have more fun and less frustration",
+    "Emotional regulation",
+    "Communication",
+    "Self-care",
+    "Confidence",
+    "Boundaries",
+    "Financial stability",
+    "Purpose",
+    "Being a decent human",
   ],
-  offeringsHeading: "Here's What We've Got (So Far)",
-  offerings: [
-    {
-      ...k("assessment"),
-      icon: "📋",
-      title: "The FREE Dateability Assessment",
-      body: "A 5-minute quiz to identify the blind spots that might be keeping you single. Get personalized results + tips you can actually use.",
-      ctaLabel: "Take Our Free Dateability Assessment",
-      href: "/assessment",
-    },
-    {
-      ...k("podcast"),
-      icon: "🎙️",
-      title: "The dateable()af Podcast",
-      body: "A funny, informative, and occasionally spicy look at what it really takes to date women successfully. (Listen while you're swiping—we won't judge.)",
-      ctaLabel: "Click Here to Listen",
-      href: "/podcast",
-    },
-    {
-      ...k("community"),
-      icon: "✨",
-      title: "More to Come",
-      body: "We're dreaming up the community you've been asking for—one that's smart, inclusive, and full of women supporting women. Until then, start with the quiz and the pod. We're so glad you're here.",
-      ctaLabel: "Join the list",
-      href: "/community",
-    },
-  ],
-  communityHeading: "Want to be part of our future community?",
+  offerings: [],
+  communityHeading: "Want in on what's next?",
   communityBody:
-    "We know women are craving better ways to meet other high-quality women—we are too. That's why we're building a community just for you. But we don't want to guess what you need—we want to hear it straight from you. Tell us what kind of scene would feel valuable, supportive, and real. Share your thoughts, and you'll be first in line when we open the doors.",
+    "We're building a community for people who'd rather understand their patterns than keep repeating them. We don't want to guess what you need—we want to hear it straight from you. Tell us what would feel valuable, supportive, and real, and you'll be first in line when we open the doors.",
   communityCta: {
-    label: "Click here to send us your ideas—we're listening.",
+    label: "Send us your ideas—we're listening.",
     href: "/contact",
   },
   newsletterHeading: "Stay in the loop",
   newsletterBody:
-    "You want to stay informed without getting spammed. We want to stay connected with you. We would love to send you occasional dating tips and updates about what's going on in the dateable()af community. Join our email list to stay connected.",
-  audienceCards: [
-    {
-      ...k("ac1"),
-      title: "About the Assessment",
-      body: "You're someone who wants to know yourself better. Our dateability assessment will show you how well you're doing with physical self-care, emotional stability, communication, community, passion, confidence, financial fitness, and being a good human.",
-    },
-    {
-      ...k("ac2"),
-      title: "You Want to Meet Other Women Like You",
-      body: "You're standing by, waiting for us to open the dateable()af membership program so you can make some connections. Join our email list so you can get one of the first invitations!",
-    },
-    {
-      ...k("ac3"),
-      title: "You Want to Laugh, Learn, and Be Entertained",
-      body: "Listen and subscribe to our dateable()af Podcast. We're chatting about all things related to women dating women, plus interviewing some amazing guests.",
-    },
-    {
-      ...k("ac4"),
-      title: "Let Us Know What Kind of Support You Need",
-      body: "dateable()af was designed for women, by women. We want to create a community just for you. Please message us and let us know how we can help you make dating less brutal.",
-    },
-  ],
+    "Stay informed without getting spammed. We'll send occasional updates, new episodes, and relationship insights worth opening.",
+  audienceCards: [],
 };
 
 const testimonials = [
@@ -129,14 +91,14 @@ const testimonials = [
     quote:
       "Previews of the dateable()af Podcast are so smart and funny! I've already learned a lot and I can't wait for the next episodes to come out. Our community has been needing something like the dateable()af Podcast for a long time! Rachel and Sarah are perfect for this role.",
     attribution: "J.C.",
-    context: "Single lesbian, age 46",
+    context: "Listener, age 46",
     displayOrder: 1,
   },
   {
     _id: "testimonial-2",
     _type: "testimonial",
     quote:
-      "I love the whole concept of “dateable()af,” but I am especially impressed with the “dateability” assessment Dr. Kyle created. It's a comprehensive tool to evaluate an individual's overall health and well-being, efficiently zeroing in on areas that may be holding someone back from the successful relationship they desire. Her model is going to save people a tremendous amount of time, money and general anguish when it comes to dating.",
+      "I love the whole concept of “dateable()af,” but I am especially impressed with the Relatability Assessment Dr. Kyle created. It's a comprehensive tool to evaluate an individual's overall health and well-being, efficiently zeroing in on areas that may be holding someone back from the relationships they desire. Her model is going to save people a tremendous amount of time, money and general anguish.",
     attribution: "J. Bosarge",
     context: "Ph.D. Clinical Psychologist",
     displayOrder: 2,
@@ -145,9 +107,9 @@ const testimonials = [
     _id: "testimonial-3",
     _type: "testimonial",
     quote:
-      "I've been very successful in every area of my life except romantic relationships. It's so hard to find quality women, and the apps just aren't getting it right. I love what dateable()af is envisioning for our community and I can't wait to see where it goes! The Dateability Assessment is such a great tool and I really want to meet other women who are putting this knowledge into practice.",
+      "I've been very successful in every area of my life except my relationships. I love what dateable()af is building and I can't wait to see where it goes! The Relatability Assessment is such a great tool, and I really want to connect with other people putting this knowledge into practice.",
     attribution: "A.G.",
-    context: "Single queer woman, age 42",
+    context: "Listener",
     displayOrder: 3,
   },
 ];

@@ -124,7 +124,7 @@ export default async function HomePageRoute() {
               ) : null}
               {home.missionPoints && home.missionPoints.length > 0 ? (
                 <Reveal delay={0.16}>
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                     {home.missionPoints.map((p) => (
                       <li
                         key={p}
@@ -137,6 +137,15 @@ export default async function HomePageRoute() {
                   </ul>
                 </Reveal>
               ) : null}
+              <Reveal delay={0.24}>
+                <Link
+                  href="/assessment"
+                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
+                >
+                  Take the free assessment
+                  <span aria-hidden>→</span>
+                </Link>
+              </Reveal>
             </div>
           </Container>
         </section>
