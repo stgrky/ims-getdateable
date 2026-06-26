@@ -94,17 +94,35 @@ export default async function PodcastPageRoute() {
         </section>
       ) : null}
 
-      {/* ── FULL SHOW ── */}
+      {/* ── LATEST EPISODE + LISTEN CTA ── */}
       <section className="bg-[var(--color-background)] pb-16 md:pb-20">
         <Container>
           <Reveal>
             <p className="mb-5 text-[11px] font-medium tracking-[0.22em] uppercase text-[var(--color-accent-strong)]">
-              Every episode
+              Now playing — latest episode
             </p>
           </Reveal>
           <Reveal delay={0.08}>
-            <PodcastEmbed url={page.showUrl} kind="show" title="Full show" />
+            <PodcastEmbed url={page.showUrl} kind="show" title="Latest episode" />
           </Reveal>
+          {page.showUrl ? (
+            <Reveal delay={0.16}>
+              <div className="mt-7 flex flex-col items-center gap-3 text-center">
+                <a
+                  href={page.showUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
+                >
+                  Browse every episode on Spotify
+                  <span aria-hidden>→</span>
+                </a>
+                <p className="text-sm text-[var(--color-muted)]">
+                  Follow the show so a new episode lands in your feed every week.
+                </p>
+              </div>
+            </Reveal>
+          ) : null}
         </Container>
       </section>
 

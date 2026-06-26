@@ -9,15 +9,18 @@ type Props = {
 
 /**
  * Inline podcast player. Accepts a Spotify, Apple Podcasts, or YouTube link
- * and rewrites it to that platform's embed URL. Spotify is the primary target
- * (the show embed renders the full episode list with an inline player).
+ * and rewrites it to that platform's embed URL. Spotify is the primary target.
+ *
+ * Note: the Spotify *show* embed only features the latest episode (it does not
+ * render a browsable list inside the iframe), so we size it as a single-episode
+ * player and link out to Spotify for the full back catalog.
  *
  * Renders a tasteful empty state when no link is set yet, so the page still
  * reads well before the client pastes their show/episode URL in Studio.
  */
 export function PodcastEmbed({ url, kind = "show", title }: Props) {
   const embedUrl = url ? toEmbedUrl(url) : null;
-  const height = kind === "show" ? 660 : 232;
+  const height = kind === "show" ? 352 : 232;
 
   if (!embedUrl) {
     return (

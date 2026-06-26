@@ -16,10 +16,10 @@ console.log(`→ Seeding podcast into project ${projectId}/${dataset}`);
 const podcastPage = {
   _id: "podcastPage",
   _type: "podcastPage",
-  eyebrow: "The podcast",
-  heading: "Listen to Dateable AF.",
+  eyebrow: "The Dateable AF Podcast",
+  heading: "Listen to the latest episode.",
   intro:
-    "Relationships, decoded—one episode at a time. Hit play right here; no app-hopping required.",
+    "Relationships, decoded—one hot mess at a time. Press play on this week's episode right here, then follow the show to catch every drop.",
   showUrl: "https://open.spotify.com/show/4nFlpmwPgRVUvkdgReMCTF",
   platformLinks: [],
 };
