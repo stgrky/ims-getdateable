@@ -17,7 +17,7 @@ type Props = {
  */
 export function PodcastEmbed({ url, kind = "show", title }: Props) {
   const embedUrl = url ? toEmbedUrl(url) : null;
-  const height = kind === "show" ? 480 : 232;
+  const height = kind === "show" ? 660 : 232;
 
   if (!embedUrl) {
     return (
