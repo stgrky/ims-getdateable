@@ -8,7 +8,6 @@ import { SanityImg } from "./SanityImg";
 const NAV_LINKS = [
   { href: "/origin-story", label: "Origin Story" },
   { href: "/podcast", label: "Podcast" },
-  { href: "/assessment", label: "Assessment" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -53,10 +52,10 @@ export function Header({ practiceName, logo }: Props) {
           ))}
         </nav>
         <Link
-          href="/assessment"
+          href="/podcast"
           className="hidden rounded-full bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)] md:inline-flex"
         >
-          Take the assessment
+          Listen
         </Link>
       </Container>
       <Container className="flex justify-between gap-4 pb-3 md:hidden">

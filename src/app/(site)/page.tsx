@@ -137,15 +137,6 @@ export default async function HomePageRoute() {
                   </ul>
                 </Reveal>
               ) : null}
-              <Reveal delay={0.24}>
-                <Link
-                  href="/assessment"
-                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
-                >
-                  Take the free assessment
-                  <span aria-hidden>→</span>
-                </Link>
-              </Reveal>
             </div>
           </Container>
         </section>
@@ -294,10 +285,10 @@ export default async function HomePageRoute() {
       ) : null}
 
       <CtaBanner
-        heading="Ready to date a little better?"
-        body="Start with the free assessment — five minutes, real answers, zero judgment."
-        ctaLabel={home.primaryCta?.label ?? "Take the assessment"}
-        ctaHref={home.primaryCta?.href ?? "/assessment"}
+        heading="Press play. We'll do the rest."
+        body="New episodes every week — funny, honest, and occasionally a little too real."
+        ctaLabel={home.primaryCta?.label ?? "Listen to the podcast"}
+        ctaHref={home.primaryCta?.href ?? "/podcast"}
       />
 
       {/* ── BLOG ── */}

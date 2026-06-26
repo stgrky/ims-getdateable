@@ -74,7 +74,7 @@ export function HomeHero({ home }: Props) {
         <div className="mt-10 flex flex-wrap gap-4">
           {home.primaryCta?.label ? (
             <MagneticButton
-              href={home.primaryCta.href ?? "/assessment"}
+              href={home.primaryCta.href ?? "/podcast"}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_-10px_var(--color-accent)] transition hover:bg-[var(--color-accent-strong)]"
             >
               {home.primaryCta.label}

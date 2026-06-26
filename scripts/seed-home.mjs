@@ -31,7 +31,7 @@ const siteSettings = {
     { ...k("tt"), label: "TikTok", url: "#" },
   ],
   footerText: "Relationships, decoded. Made with humor and heart in Austin, TX.",
-  stickyCta: { label: "Take the assessment", href: "/assessment" },
+  stickyCta: { label: "Listen to the podcast", href: "/podcast" },
 };
 
 const homePage = {
@@ -42,8 +42,8 @@ const homePage = {
   heroQuote: "Decoded—one hot mess at a time.",
   heroSubhead:
     "Relationships are complicated—not just romantic ones, but the ones with partners, exes, friends, family, coworkers, and yourself. Dateable AF is a podcast about how humans connect, avoid, attach, fight, love, and try again—with humor, honesty, and zero bullshit.",
-  primaryCta: { label: "Take the free assessment", href: "/assessment" },
-  secondaryCta: { label: "Listen to the podcast", href: "/podcast" },
+  primaryCta: { label: "Listen to the podcast", href: "/podcast" },
+  secondaryCta: { label: "Get on the list", href: "/community" },
   introHeading: "We don't give dating tips.",
   introBody:
     "We help you understand your relationship patterns. Every week on the Dateable AF Podcast, we break down:",
@@ -57,19 +57,9 @@ const homePage = {
   ],
   introClosing:
     "Whether you're dating, married, divorced, single, or “it's complicated,” these patterns follow you everywhere—until you understand them.",
-  missionHeading: "The Relatability Assessment.",
-  missionIntro:
-    "It's not about being “good” or “bad.” It shows you how you're doing across eight core relationship capacities—and what's quietly getting in the way:",
-  missionPoints: [
-    "Emotional regulation",
-    "Communication",
-    "Self-care",
-    "Confidence",
-    "Boundaries",
-    "Financial stability",
-    "Purpose",
-    "Being a decent human",
-  ],
+  missionHeading: "",
+  missionIntro: "",
+  missionPoints: [],
   offerings: [],
   communityHeading: "Want in on what's next?",
   communityBody:

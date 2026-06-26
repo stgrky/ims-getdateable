@@ -60,10 +60,10 @@ export default async function OriginStoryRoute() {
       ))}
 
       <CtaBanner
-        heading="Now you know us. Your turn."
-        body="Start with the free assessment — five minutes, real answers, zero judgment."
-        ctaLabel="Take the assessment"
-        ctaHref="/assessment"
+        heading="Now you know us. Come hang out."
+        body="The Dateable AF Podcast drops a new episode every week. Press play."
+        ctaLabel="Listen to the podcast"
+        ctaHref="/podcast"
       />
     </>
   );

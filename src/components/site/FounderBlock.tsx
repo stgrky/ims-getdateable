@@ -107,7 +107,7 @@ export function FounderBlock({ founder, index }: Props) {
         {founder.ctaLabel ? (
           <Reveal delay={0.18}>
             <Link
-              href={founder.ctaHref ?? "/assessment"}
+              href={founder.ctaHref ?? "/podcast"}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
               {founder.ctaLabel}

@@ -62,14 +62,6 @@ export function Footer({ settings }: { settings: SiteSettings }) {
             </Link>
           </p>
           <p>
-            <Link
-              href="/assessment"
-              className="hover:text-[var(--color-foreground)]"
-            >
-              Assessment
-            </Link>
-          </p>
-          <p>
             <Link href="/blog" className="hover:text-[var(--color-foreground)]">
               Blog
             </Link>
