@@ -8,7 +8,7 @@ import { structure } from "./src/sanity/structure";
 
 export default defineConfig({
   name: "default",
-  title: "Therapy Site",
+  title: "dateable()af",
 
   projectId,
   dataset,
