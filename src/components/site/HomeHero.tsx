@@ -7,7 +7,7 @@ import { EASE_EDITORIAL } from "@/components/motion/easings";
 import { Float } from "@/components/motion/Float";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Reveal } from "@/components/motion/Reveal";
-import { WordReveal } from "@/components/motion/WordReveal";
+import { Typewriter } from "@/components/motion/Typewriter";
 import { SanityImg } from "@/components/SanityImg";
 import type { HomePage } from "@/sanity/types";
 
@@ -44,7 +44,7 @@ export function HomeHero({ home }: Props) {
             : "text-[2.6rem] md:text-[4.2rem]"
         }`}
       >
-        <WordReveal text={home.heroHeading ?? ""} />
+        <Typewriter text={home.heroHeading ?? ""} />
       </h1>
 
       {home.heroQuote ? (
