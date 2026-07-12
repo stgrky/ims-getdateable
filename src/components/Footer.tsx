@@ -62,11 +62,6 @@ export function Footer({ settings }: { settings: SiteSettings }) {
             </Link>
           </p>
           <p>
-            <Link href="/blog" className="hover:text-[var(--color-foreground)]">
-              Blog
-            </Link>
-          </p>
-          <p>
             <Link
               href="/contact"
               className="hover:text-[var(--color-foreground)]"
