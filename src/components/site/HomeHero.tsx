@@ -116,9 +116,9 @@ export function HomeHero({ home }: Props) {
                 image={home.heroImage}
                 alt={home.heroImage?.alt ?? home.heroHeading ?? ""}
                 width={1000}
-                height={1100}
+                height={1000}
                 priority
-                className="aspect-[10/11] w-full object-cover"
+                className="aspect-square w-full object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </motion.div>
