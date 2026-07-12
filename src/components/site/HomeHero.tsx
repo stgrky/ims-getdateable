@@ -44,7 +44,7 @@ export function HomeHero({ home }: Props) {
             : "text-[2.6rem] md:text-[4.2rem]"
         }`}
       >
-        <Typewriter text={home.heroHeading ?? ""} speed={130} />
+        <Typewriter text={home.heroHeading ?? ""} speed={95} />
       </h1>
 
       {home.heroQuote ? (
@@ -104,9 +104,47 @@ export function HomeHero({ home }: Props) {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-surface)]">
-      <Container className="grid gap-12 py-20 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-16 md:py-28">
+      {/* Mobile only: the photo becomes a faint full-bleed backdrop instead of
+          a standalone block — keeps the hero to just heading/copy/buttons. */}
+      <div className="absolute inset-0 md:hidden" aria-hidden="true">
+        <SanityImg
+          image={home.heroImage}
+          alt=""
+          width={800}
+          height={800}
+          className="h-full w-full scale-110 object-cover opacity-[0.08] blur-2xl"
+          sizes="100vw"
+        />
+      </div>
+
+      <Container className="relative py-20 md:py-24 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:py-28">
+        {/* Tablet only (md, below lg): floated so heading/copy/buttons wrap
+            around it, old-magazine-layout style. */}
+        <Float
+          duration={8}
+          distance={5}
+          className="hidden md:float-right md:mb-6 md:ml-8 md:block md:w-[45%] lg:hidden"
+        >
+          <motion.div
+            className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)]"
+            {...imageReveal}
+          >
+            <SanityImg
+              image={home.heroImage}
+              alt={home.heroImage?.alt ?? home.heroHeading ?? ""}
+              width={600}
+              height={600}
+              priority
+              className="aspect-square w-full object-cover"
+              sizes="45vw"
+            />
+          </motion.div>
+        </Float>
+
         {copy}
-        <div className="relative">
+
+        {/* Desktop only (lg+): back to a real grid column, same as before. */}
+        <div className="relative hidden lg:block">
           <Float duration={8} distance={5}>
             <motion.div
               className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)]"
@@ -119,7 +157,7 @@ export function HomeHero({ home }: Props) {
                 height={1000}
                 priority
                 className="aspect-square w-full object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="50vw"
               />
             </motion.div>
           </Float>
