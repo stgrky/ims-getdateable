@@ -44,7 +44,7 @@ export function HomeHero({ home }: Props) {
             : "text-[2.6rem] md:text-[4.2rem]"
         }`}
       >
-        <Typewriter text={home.heroHeading ?? ""} />
+        <Typewriter text={home.heroHeading ?? ""} speed={130} />
       </h1>
 
       {home.heroQuote ? (
