@@ -112,7 +112,7 @@ export function HomeHero({ home }: Props) {
           alt=""
           width={800}
           height={800}
-          className="h-full w-full scale-110 object-cover opacity-[0.08] blur-2xl"
+          className="h-full w-full scale-110 object-cover opacity-25 blur-lg"
           sizes="100vw"
         />
       </div>
